@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <h1>Request form</h1>
+            <form #f="ngForm" (ngSubmit)="sendRequest()">
+                <div class="form-group">
+                <label text="name">User Id</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="userId" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <div class="form-group">
+                <label text="alterEgo">Office</label>
+                <input type="text" class="form-control" [(ngModel)]="office" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="form-group">
+                <label text="alterEgo">Bill</label>
+                <input type="text" class="form-control" [(ngModel)]="bill" [ngModelOptions]="{standalone: true}">
+                </div>
+        
+                <button type="submit" class="btn btn-success">Submit</button>
+        
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12">
+          <table class="table table-bordered" *ngIf="_blocchiArray">
+              <tr>
+                  <th>Account existance</th>
+                  <th>Account State</th> 
+                  <th>Currency account</th>
+                  <th>Closure request</th>
+                  <th>Blochi</th>
+              </tr>
+              <tr *ngFor="let blocchi of _blocchiArray">
+                  <td class="text-center">{{blocchi.esistenzaConto}}</td>
+                  <td class="text-center">{{blocchi.statoConto}}</td>
+                  <td class="text-center">{{blocchi.divisaConto}}</td>
+                  <td class="text-center">{{blocchi.richiestaChiusura}}</td>
+                  <td class="text-center">{{blocchi.presenzaBlocchi}}</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>

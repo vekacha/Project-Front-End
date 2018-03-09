@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Customer</th>
+                    <th>Account Number</th> 
+                    <th>Type</th>
+                    <th>Balance</th>
+                    <th>Blochi type</th>
+                    <th>Blocked</th>
+                </tr>
+                <tr *ngFor="let bankAccount of _bankArray">
+                    <td class="text-center">{{bankAccount.customerId}}</td>
+                    <td class="text-center">{{bankAccount.accountNumber}}</td>
+                    <td class="text-center">{{bankAccount.accountType}}</td>
+                    <td class="text-center">{{bankAccount.balance}}</td>
+                    <td class="text-center">{{bankAccount.blocchiTypeCCO}}</td>
+                    <td class="text-center">{{bankAccount.blocked}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

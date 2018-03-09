@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Customer</th>
+                    <th>Role</th> 
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Signature Type</th>
+                </tr>
+                <tr *ngFor="let Customer of _customerArray">
+                    <td class="text-center">{{Customer.customerId}}</td>
+                    <td class="text-center">{{Customer.roleId}}</td>
+                    <td class="text-center">{{Customer.firstName}}</td>
+                    <td class="text-center">{{Customer.lastName}}</td>
+                    <td class="text-center">{{Customer.signatureType}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
